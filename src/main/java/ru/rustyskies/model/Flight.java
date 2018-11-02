@@ -1,5 +1,6 @@
 package ru.rustyskies.model;
 
+import lombok.Getter;
 import ru.rustyskies.constants.Airport;
 
 import java.sql.Date;
@@ -8,6 +9,7 @@ import java.sql.Date;
  * @author Egor Markin
  * @since 21.10.2014
  */
+@Getter
 public class Flight {
 
 	public final Airport srcAirport;

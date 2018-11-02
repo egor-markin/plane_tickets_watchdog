@@ -1,5 +1,7 @@
 package ru.rustyskies.constants;
 
+import lombok.Getter;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,6 +9,7 @@ import java.util.List;
  * @author Egor Markin
  * @since 21.10.2014
  */
+@Getter
 public enum Airport {
 	
 	// Europe
@@ -20,6 +23,11 @@ public enum Airport {
 	Rome("ROM", "Rome", "Italy", Region.Europe),
 	Barcelona("BCN", "Barcelona", "Spain", Region.Europe),
 	Zurich("ZRH", "Zürich", "Switzerland", Region.Europe),
+	Venice("VCE", "Venice", "Italy", Region.Europe),
+    Milan("MIL", "Milan", "Italy", Region.Europe),
+    Berlin("BER", "Berlin", "Germany", Region.Europe),
+    Tunis("TUN", "Tunis", "Tunisia", Region.Europe),
+    Stockholm("STO", "Stockholm", "Sweden", Region.Europe),
 	
 	// Middle East
 	Dubai("DXB", "Dubai", "UAE", Region.MiddleEast),
@@ -65,7 +73,17 @@ public enum Airport {
 	Montevideo("MVD", "Montevideo", "Uruguay", Region.SouthAmerica),
 	Recife("REC", "Recife", "Brazil", Region.SouthAmerica, Subregion.South),
 
-	Tokyo("TYO", "Tokyo", "Japan", Region.East);
+    // Asia
+    Jakarta("JKT", "Jakarta", "Indonesia", Region.Asia),
+    Manila("MNL", "Manila", "Philippines", Region.Asia),
+    Bangkok("BKK", "Bangkok", "Thailand", Region.Asia),
+    Phuket("HKT", "Phuket", "Thailand", Region.Asia),
+    HoChiMinh("SGN", "Ho Chi Minh", "Vietnam", Region.Asia),
+    Colombo("CMB", "Colombo", "Sri Lanka", Region.Asia),
+	Tokyo("TYO", "Tokyo", "Japan", Region.Asia),
+
+    // Africa
+    Marrakesh("RAK", "Marrakesh", "Morocco", Region.Africa);
 	
 	public final String code;
 	public final String city;
@@ -73,7 +91,7 @@ public enum Airport {
 	public final Region region;
 	public final Subregion subregion;
 	
-	private Airport(String code, String city, String country, Region region) {
+	Airport(String code, String city, String country, Region region) {
 		this.code = code;
 		this.city = city;
 		this.country = country;
@@ -81,7 +99,7 @@ public enum Airport {
 		this.subregion = null;
 	}
 	
-	private Airport(String code, String city, String country, Region region, Subregion subregion) {
+	Airport(String code, String city, String country, Region region, Subregion subregion) {
 		this.code = code;
 		this.city = city;
 		this.country = country;
@@ -109,22 +127,5 @@ public enum Airport {
 			}
 		}
 		return list;
-	}
-	
-
-	public String getCode() {
-		return code;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public Region getRegion() {
-		return region;
 	}
 }

@@ -1,18 +1,17 @@
 package ru.rustyskies.search;
 
-import freemarker.template.TemplateException;
 import lombok.extern.log4j.Log4j;
 import ru.rustyskies.constants.Airport;
-import ru.rustyskies.model.*;
+import ru.rustyskies.model.SearchConf;
+import ru.rustyskies.model.SearchRangeConf;
+import ru.rustyskies.model.SearchResult;
+import ru.rustyskies.model.Trip;
 import ru.rustyskies.search.handlers.MockSearchHandler;
 import ru.rustyskies.search.handlers.MomondoRestSearchHandler;
 import ru.rustyskies.search.handlers.MomondoWebDriverHandler;
 import ru.rustyskies.search.handlers.SearchHandler;
 import ru.rustyskies.utils.DateUtils;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Date;
 import java.text.DecimalFormat;

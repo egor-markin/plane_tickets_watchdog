@@ -35,6 +35,7 @@ public abstract class SearchHandler implements Callable<SearchResult> {
         if (!checkResult(result)) {
             log.error("Failed to perform search " + searchConf.getFlights() + " after " + MAX_NUMBER_OF_SEARCH_ATTEMPTS + " attempts.");
         }
+
         return result;
     }
 
@@ -43,5 +44,4 @@ public abstract class SearchHandler implements Callable<SearchResult> {
     }
 
     protected abstract SearchResult search(SearchConf searchConf);
-
 }

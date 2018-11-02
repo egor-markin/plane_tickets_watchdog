@@ -12,6 +12,8 @@ public enum Region {
 	CentralAmerica,
 	SouthAmerica,
 	Caribbean,
-	East;
+	Asia,
+	East,
+    Africa;
 
 }
